@@ -57,9 +57,9 @@ Primary :
 
 #include "head.h"
 
-//Óï·¨º¯Êý
+//ï¿½ï·¨ï¿½ï¿½ï¿½ï¿½
 
-string calculate(string s, istream* out_ip);	//Ö÷Òª¼ÆËãº¯Êý
+string calculate(string s, istream* out_ip);	//ï¿½ï¿½Òªï¿½ï¿½ï¿½ãº¯ï¿½ï¿½
 double statement(istream* out_ip);				
 double declaration(char k);
 double expression();
@@ -70,10 +70,56 @@ double equation(istream* out_ip);
 double table(istream* out_ip);
 double sum(istream* out_ip);
 
-//¸¨Öúº¯Êý
+//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //void statistics();
 void clean_up_mess();
 void init_error_list(vector<string>&);
-void read_number(double& d, string name,istream* out_ip);		//ÓÃÓÚ¶ÁÍâ²¿ÊäÈë
+void read_number(double& d, string name,istream* out_ip);		//ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½â²¿ï¿½ï¿½ï¿½ï¿½
 
 #endif // CALC_H
+
+
+    \begin{framed}
+    Input:\par
+    \qquad File\par
+    \qquad        Calculate\par\par
+        Calculate:\par
+        \qquad        Statement\par
+        \qquad        Print\par
+        \qquad         Quit\par
+        \qquad          Help\par
+        \qquad        Calculation Statement\par\par
+        Statement:\par
+        \qquad        Declarate variable/function\par
+        \qquad        Expression\par
+        \qquad        Table\par
+        \qquad        Solve equation\par
+        \qquad        Sum\par\par
+        Declaration:\par
+        \qquad        ``let" Name ``=" Expression\par
+        \qquad         ``set" Name ``=" Expression\par
+        \qquad         ``delete" Name\par
+        \qquad         ``let" Function name ``=" Expression\par
+        \qquad        ``delete" Function name\par\par
+        Expression:\par
+        \qquad       Term\par
+        \qquad        Expression``+"Term\par
+        \qquad        Expression``-"Term\par\par
+        Term:\par
+        \qquad        U\_primary\par
+        \qquad         Term``*"U\_primary\par
+        \qquad         Term``/"U\_primary\par
+        \qquad         Term``\%"U\_primary\par\par
+        U\_primary:\par
+        \qquad        Primary\par
+        \qquad        U\_primary``\^"Primary\par
+        \qquad         U\_Primary``!"\par
+        \qquad          U\_Primary``deg"\par\par
+        Primary:\par
+        \qquad          Number\par
+        \qquad         Variable\par
+        \qquad        ``Function("Expression``)"\par
+        \qquad        ``("Expression``)"\par
+        \qquad        ``-"Primary\par
+        \qquad          ``+"Primary\par
+    \end{framed}
